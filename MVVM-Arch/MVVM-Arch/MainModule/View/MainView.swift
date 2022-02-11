@@ -28,6 +28,7 @@ class MainView: UIView {
             activityIndicator.isHidden = true
             activityIndicator.stopAnimating()
         case .loading(let loading):
+
             update(viewData: loading, isHidden: false)
             activityIndicator.isHidden = true
             activityIndicator.startAnimating()
