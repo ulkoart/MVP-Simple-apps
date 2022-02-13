@@ -38,14 +38,14 @@ class AppCoordinator: Coordinator {
 
     func start() {
         let navigationController = UINavigationController()
-        let mainViewCoordinator = MainViewCoordinator(navigationController: navigationController)
-        mainViewCoordinator.start()
+        let listBreedsCoordinator = ListBreedsCoordinator(navigationController: navigationController)
+        listBreedsCoordinator.start()
         
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         
-        mainViewCoordinator.isCompleted = { [weak self] in
-            self?.free(coordinator: mainViewCoordinator)
+        listBreedsCoordinator.isCompleted = { [weak self] in
+            self?.free(coordinator: listBreedsCoordinator)
         }
     }
 }
