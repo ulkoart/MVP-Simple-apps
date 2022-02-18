@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE221F7827BFF9940004B0E2 /* ListBreedsViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE221F7727BFF9940004B0E2 /* ListBreedsViewModelFactory.swift */; };
 		CE53392C27B6F40900C93AA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53392B27B6F40900C93AA7 /* AppDelegate.swift */; };
 		CE53392E27B6F40900C93AA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53392D27B6F40900C93AA7 /* SceneDelegate.swift */; };
 		CE53393027B6F40900C93AA7 /* ListBreedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53392F27B6F40900C93AA7 /* ListBreedsViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE221F7727BFF9940004B0E2 /* ListBreedsViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBreedsViewModelFactory.swift; sourceTree = "<group>"; };
 		CE53392827B6F40900C93AA7 /* CoordinatorSimple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoordinatorSimple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE53392B27B6F40900C93AA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE53392D27B6F40900C93AA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE221F7627BFF9760004B0E2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE53395527B9611B00C93AA7 /* ListBreedsViewModel.swift */,
+				CE221F7727BFF9940004B0E2 /* ListBreedsViewModelFactory.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		CE53391F27B6F40900C93AA7 = {
 			isa = PBXGroup;
 			children = (
@@ -85,11 +96,11 @@
 		CE53394027B6F4C800C93AA7 /* ListBreeds */ = {
 			isa = PBXGroup;
 			children = (
+				CE221F7627BFF9760004B0E2 /* ViewModel */,
 				CE53392F27B6F40900C93AA7 /* ListBreedsViewController.swift */,
 				CE53394C27B7D6B800C93AA7 /* ListBreedsPresenter.swift */,
 				CE53394E27B8076600C93AA7 /* ListBreedsInteractor.swift */,
 				CE53394227B6F86300C93AA7 /* ListBreedsCoordinator.swift */,
-				CE53395527B9611B00C93AA7 /* ListBreedsViewModel.swift */,
 			);
 			path = ListBreeds;
 			sourceTree = "<group>";
@@ -197,6 +208,7 @@
 				CE53394627B6F8DD00C93AA7 /* AppCoordinator.swift in Sources */,
 				CE53392C27B6F40900C93AA7 /* AppDelegate.swift in Sources */,
 				CE53392E27B6F40900C93AA7 /* SceneDelegate.swift in Sources */,
+				CE221F7827BFF9940004B0E2 /* ListBreedsViewModelFactory.swift in Sources */,
 				CE53395327B82E2700C93AA7 /* DogService.swift in Sources */,
 				CE53395627B9611B00C93AA7 /* ListBreedsViewModel.swift in Sources */,
 				CE53394F27B8076600C93AA7 /* ListBreedsInteractor.swift in Sources */,

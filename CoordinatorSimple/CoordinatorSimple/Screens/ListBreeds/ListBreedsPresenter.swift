@@ -17,10 +17,12 @@ protocol ListBreedsPresenterOutput: AnyObject {
 
 class ListBreedsPresenter {
     weak var viewController: ListBreedsViewDisplay?
-    var interactor: ListBreedsInteractorProtocol
+    private var interactor: ListBreedsInteractorProtocol
+    private var viewModelFactory: ListBreedsViewModelFactoryProtocol
     
-    init(interactor: ListBreedsInteractorProtocol) {
+    init(interactor: ListBreedsInteractorProtocol, viewModelFactory: ListBreedsViewModelFactoryProtocol) {
         self.interactor = interactor
+        self.viewModelFactory = viewModelFactory
     }
 }
 
@@ -34,7 +36,7 @@ extension ListBreedsPresenter: ListBreedsPresenterInput {
 extension ListBreedsPresenter: ListBreedsPresenterOutput {
     /// мэпинг AllBreedsDTO во вьюмодели listVew
     public func loadBreedsSuccess(with allBreeds: AllBreedsDTO) {
-        let breeds: [ListBreedsViewModel] = allBreeds.message.keys.map { .init(breed: $0) }
+        let breeds: [ListBreedsViewModel] = allBreeds.message.keys.map { viewModelFactory.makeViewModel(breedName: $0) }
         viewController?.stopActivityIndicator()
         viewController?.setBreeds(with: breeds)
     }
