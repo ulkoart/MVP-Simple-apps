@@ -9,4 +9,5 @@ import Foundation
 
 struct ListBreedsViewModel {
     let breed: String
+    let hasSubBreeds: Bool
 }

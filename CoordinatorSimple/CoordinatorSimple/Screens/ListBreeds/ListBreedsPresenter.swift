@@ -36,7 +36,7 @@ extension ListBreedsPresenter: ListBreedsPresenterInput {
 extension ListBreedsPresenter: ListBreedsPresenterOutput {
     /// мэпинг AllBreedsDTO во вьюмодели listVew
     public func loadBreedsSuccess(with allBreeds: AllBreedsDTO) {
-        let breeds: [ListBreedsViewModel] = allBreeds.message.keys.map { viewModelFactory.makeViewModel(breedName: $0) }
+        let breeds: [ListBreedsViewModel] = allBreeds.message.map { return viewModelFactory.makeViewModel(breedItem: $0) }
         viewController?.stopActivityIndicator()
         viewController?.setBreeds(with: breeds)
     }
