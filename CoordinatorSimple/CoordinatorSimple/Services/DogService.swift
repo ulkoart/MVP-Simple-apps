@@ -7,11 +7,6 @@
 
 import Foundation
 
-struct AllBreedsDTO: Codable {
-    let message: [String: [String]]
-    let status: String
-}
-
 protocol DogServiceProtocol {
     func getListAllBreeds(completion: @escaping (Result<AllBreedsDTO, Error>) -> ())
 }

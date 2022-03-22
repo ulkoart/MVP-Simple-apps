@@ -10,11 +10,12 @@ import UIKit
 protocol ListBreedsViewDisplay: AnyObject {
     func startActivityIndicator()
     func stopActivityIndicator()
-    func setBreeds (with breeds: [ListBreedsViewModel])
+    func setBreeds (with breeds: [BreedViewModelProtocol])
 }
 
 final class ListBreedsViewController: UIViewController {
     private let presenter: ListBreedsPresenterInput
+    
     private let activityIndicator: UIActivityIndicatorView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.style = .large
@@ -22,11 +23,14 @@ final class ListBreedsViewController: UIViewController {
         $0.hidesWhenStopped = true
         return $0
     }(UIActivityIndicatorView())
+    
     private let tableView: UITableView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.allowsSelection = false
         return $0
     }(UITableView())
-    private var breeds: [ListBreedsViewModel] = [] {
+    
+    private var breeds: [BreedViewModelProtocol] = [] {
         didSet {
             DispatchQueue.main.async { [weak self] in
                 self?.tableView.reloadData()
@@ -83,7 +87,6 @@ extension ListBreedsViewController: ListBreedsViewDisplay {
         DispatchQueue.main.async { [weak self] in
             self?.activityIndicator.startAnimating()
         }
-        
     }
     
     public func stopActivityIndicator() {
@@ -92,14 +95,12 @@ extension ListBreedsViewController: ListBreedsViewDisplay {
         }
     }
     
-    public func setBreeds (with breeds: [ListBreedsViewModel]) {
+    public func setBreeds (with breeds: [BreedViewModelProtocol]) {
         self.breeds = breeds
     }
 }
 
-extension ListBreedsViewController: UITableViewDelegate {
-    
-}
+extension ListBreedsViewController: UITableViewDelegate {}
 
 extension ListBreedsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

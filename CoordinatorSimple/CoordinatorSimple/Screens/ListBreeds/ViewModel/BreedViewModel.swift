@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct ListBreedsViewModel {
+protocol BreedViewModelProtocol {
+    var breed: String { get }
+    var hasSubBreeds: Bool { get }
+}
+
+struct BreedViewModel: BreedViewModelProtocol {
     let breed: String
     let hasSubBreeds: Bool
 }

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE221F7827BFF9940004B0E2 /* ListBreedsViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE221F7727BFF9940004B0E2 /* ListBreedsViewModelFactory.swift */; };
+		CE221F7827BFF9940004B0E2 /* BreedsViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE221F7727BFF9940004B0E2 /* BreedsViewModelFactory.swift */; };
 		CE53392C27B6F40900C93AA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53392B27B6F40900C93AA7 /* AppDelegate.swift */; };
 		CE53392E27B6F40900C93AA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53392D27B6F40900C93AA7 /* SceneDelegate.swift */; };
 		CE53393027B6F40900C93AA7 /* ListBreedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53392F27B6F40900C93AA7 /* ListBreedsViewController.swift */; };
@@ -18,11 +18,12 @@
 		CE53394D27B7D6B800C93AA7 /* ListBreedsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53394C27B7D6B800C93AA7 /* ListBreedsPresenter.swift */; };
 		CE53394F27B8076600C93AA7 /* ListBreedsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53394E27B8076600C93AA7 /* ListBreedsInteractor.swift */; };
 		CE53395327B82E2700C93AA7 /* DogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53395227B82E2700C93AA7 /* DogService.swift */; };
-		CE53395627B9611B00C93AA7 /* ListBreedsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53395527B9611B00C93AA7 /* ListBreedsViewModel.swift */; };
+		CE53395627B9611B00C93AA7 /* BreedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53395527B9611B00C93AA7 /* BreedViewModel.swift */; };
+		CEE9914827EA489600BECEE6 /* Breeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9914727EA489600BECEE6 /* Breeds.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CE221F7727BFF9940004B0E2 /* ListBreedsViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBreedsViewModelFactory.swift; sourceTree = "<group>"; };
+		CE221F7727BFF9940004B0E2 /* BreedsViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsViewModelFactory.swift; sourceTree = "<group>"; };
 		CE53392827B6F40900C93AA7 /* CoordinatorSimple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoordinatorSimple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE53392B27B6F40900C93AA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE53392D27B6F40900C93AA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +36,8 @@
 		CE53394C27B7D6B800C93AA7 /* ListBreedsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBreedsPresenter.swift; sourceTree = "<group>"; };
 		CE53394E27B8076600C93AA7 /* ListBreedsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBreedsInteractor.swift; sourceTree = "<group>"; };
 		CE53395227B82E2700C93AA7 /* DogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogService.swift; sourceTree = "<group>"; };
-		CE53395527B9611B00C93AA7 /* ListBreedsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBreedsViewModel.swift; sourceTree = "<group>"; };
+		CE53395527B9611B00C93AA7 /* BreedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedViewModel.swift; sourceTree = "<group>"; };
+		CEE9914727EA489600BECEE6 /* Breeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breeds.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +54,8 @@
 		CE221F7627BFF9760004B0E2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				CE53395527B9611B00C93AA7 /* ListBreedsViewModel.swift */,
-				CE221F7727BFF9940004B0E2 /* ListBreedsViewModelFactory.swift */,
+				CE53395527B9611B00C93AA7 /* BreedViewModel.swift */,
+				CE221F7727BFF9940004B0E2 /* BreedsViewModelFactory.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -80,6 +82,7 @@
 				CE53394427B6F8C400C93AA7 /* App */,
 				CE53395127B82DAF00C93AA7 /* Services */,
 				CE53393F27B6F4B500C93AA7 /* Screens */,
+				CEE9914627EA488400BECEE6 /* DTOs */,
 				CE53394127B6F55C00C93AA7 /* Default */,
 			);
 			path = CoordinatorSimple;
@@ -131,6 +134,14 @@
 				CE53395227B82E2700C93AA7 /* DogService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		CEE9914627EA488400BECEE6 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				CEE9914727EA489600BECEE6 /* Breeds.swift */,
+			);
+			path = DTOs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,10 +218,11 @@
 				CE53394D27B7D6B800C93AA7 /* ListBreedsPresenter.swift in Sources */,
 				CE53394627B6F8DD00C93AA7 /* AppCoordinator.swift in Sources */,
 				CE53392C27B6F40900C93AA7 /* AppDelegate.swift in Sources */,
+				CEE9914827EA489600BECEE6 /* Breeds.swift in Sources */,
 				CE53392E27B6F40900C93AA7 /* SceneDelegate.swift in Sources */,
-				CE221F7827BFF9940004B0E2 /* ListBreedsViewModelFactory.swift in Sources */,
+				CE221F7827BFF9940004B0E2 /* BreedsViewModelFactory.swift in Sources */,
 				CE53395327B82E2700C93AA7 /* DogService.swift in Sources */,
-				CE53395627B9611B00C93AA7 /* ListBreedsViewModel.swift in Sources */,
+				CE53395627B9611B00C93AA7 /* BreedViewModel.swift in Sources */,
 				CE53394F27B8076600C93AA7 /* ListBreedsInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

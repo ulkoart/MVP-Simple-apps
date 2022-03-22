@@ -17,7 +17,7 @@ class ListBreedsCoordinator: Coordinator {
     }
     /// Запуск main
     func start() {
-        let breedsViewModelFactory = ListBreedsViewModelFactory()
+        let breedsViewModelFactory = BreedsViewModelFactory()
         let interactor = ListBreedsInteractor(dogService: DogService())
         let presenter = ListBreedsPresenter(interactor: interactor, viewModelFactory: breedsViewModelFactory)
         let viewController: ListBreedsViewController = .init(presenter: presenter)
