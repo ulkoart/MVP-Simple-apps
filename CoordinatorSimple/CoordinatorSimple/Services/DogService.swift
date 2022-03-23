@@ -8,29 +8,18 @@
 import Foundation
 
 protocol DogServiceProtocol {
-    func getListAllBreeds(completion: @escaping (Result<AllBreedsDTO, Error>) -> ())
+    func getListAllBreeds(completion: @escaping (Result<AllBreedsDTO, Error>) -> Void)
 }
 
 class DogService: DogServiceProtocol {
-    func getListAllBreeds(completion: @escaping (Result<AllBreedsDTO, Error>) -> ()) {
-        let urlString = "https://dog.ceo/api/breeds/list/all"
-        guard let url = URL(string: urlString) else { return }
-        let session: URLSession = .shared
-        let decoder: JSONDecoder = .init()
-        let request = URLRequest(url: url)
-        
-        session.dataTask(with: request) { data, response, error in
-            if let error = error {
-                completion(.failure(error))
-            }
-            guard let data = data else { return }
-            
-            do {
-                let allBreedsResponse = try decoder.decode(AllBreedsDTO.self, from: data)
-                completion(.success(allBreedsResponse))
-            } catch {
-                completion(.failure(NSError()))
-            }
-        }.resume()
+    let networkService: NetworkServiceProtocol
+    
+    init(networkService: NetworkServiceProtocol = NetworkService()) {
+        self.networkService = networkService
+    }
+    
+    func getListAllBreeds(completion: @escaping (Result<AllBreedsDTO, Error>) -> Void) {
+        let request = BreedsListRequest()
+        networkService.request(request, completion: completion)
     }
 }

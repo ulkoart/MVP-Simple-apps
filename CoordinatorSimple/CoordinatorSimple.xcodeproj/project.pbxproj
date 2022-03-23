@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE126AFE27EB3A9300D72EB6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE126AFD27EB3A9300D72EB6 /* NetworkService.swift */; };
+		CE126B0127EB3C4800D72EB6 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE126B0027EB3C4800D72EB6 /* DataRequest.swift */; };
+		CE126B0327EB3DE400D72EB6 /* NetworkServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE126B0227EB3DE400D72EB6 /* NetworkServiceError.swift */; };
+		CE126B0727EB400300D72EB6 /* BreedsListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE126B0627EB400300D72EB6 /* BreedsListRequest.swift */; };
 		CE221F7827BFF9940004B0E2 /* BreedsViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE221F7727BFF9940004B0E2 /* BreedsViewModelFactory.swift */; };
 		CE53392C27B6F40900C93AA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53392B27B6F40900C93AA7 /* AppDelegate.swift */; };
 		CE53392E27B6F40900C93AA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53392D27B6F40900C93AA7 /* SceneDelegate.swift */; };
@@ -25,6 +29,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE126AFD27EB3A9300D72EB6 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		CE126B0027EB3C4800D72EB6 /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
+		CE126B0227EB3DE400D72EB6 /* NetworkServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceError.swift; sourceTree = "<group>"; };
+		CE126B0627EB400300D72EB6 /* BreedsListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsListRequest.swift; sourceTree = "<group>"; };
 		CE221F7727BFF9940004B0E2 /* BreedsViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsViewModelFactory.swift; sourceTree = "<group>"; };
 		CE53392827B6F40900C93AA7 /* CoordinatorSimple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoordinatorSimple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE53392B27B6F40900C93AA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +63,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE126AFF27EB3C2400D72EB6 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				CE126AFD27EB3A9300D72EB6 /* NetworkService.swift */,
+				CE126B0027EB3C4800D72EB6 /* DataRequest.swift */,
+				CE126B0227EB3DE400D72EB6 /* NetworkServiceError.swift */,
+				CE126B0527EB3FC800D72EB6 /* Request */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		CE126B0527EB3FC800D72EB6 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				CE126B0627EB400300D72EB6 /* BreedsListRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 		CE221F7627BFF9760004B0E2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				CE53395227B82E2700C93AA7 /* DogService.swift */,
+				CE126AFF27EB3C2400D72EB6 /* NetworkService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -231,9 +259,13 @@
 				CE53393027B6F40900C93AA7 /* ListBreedsViewController.swift in Sources */,
 				CE53394D27B7D6B800C93AA7 /* ListBreedsPresenter.swift in Sources */,
 				CE53394627B6F8DD00C93AA7 /* AppCoordinator.swift in Sources */,
+				CE126B0727EB400300D72EB6 /* BreedsListRequest.swift in Sources */,
 				CE53392C27B6F40900C93AA7 /* AppDelegate.swift in Sources */,
 				CEE9914827EA489600BECEE6 /* Breeds.swift in Sources */,
+				CE126B0127EB3C4800D72EB6 /* DataRequest.swift in Sources */,
+				CE126AFE27EB3A9300D72EB6 /* NetworkService.swift in Sources */,
 				CE53392E27B6F40900C93AA7 /* SceneDelegate.swift in Sources */,
+				CE126B0327EB3DE400D72EB6 /* NetworkServiceError.swift in Sources */,
 				CE221F7827BFF9940004B0E2 /* BreedsViewModelFactory.swift in Sources */,
 				CE53395327B82E2700C93AA7 /* DogService.swift in Sources */,
 				CEBA9A6C27EA6D1900B619E9 /* UIColor.swift in Sources */,

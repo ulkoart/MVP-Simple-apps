@@ -63,7 +63,7 @@ final class ListBreedsViewController: UIViewController {
         /// black - белый статус бар, default - черный
         navigationController?.navigationBar.barStyle = .black
         /// цвет кнопок в Items
-        navigationController?.navigationBar.tintColor = .red
+        navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.barTintColor = .brown
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         
