@@ -19,6 +19,8 @@
 		CE53394F27B8076600C93AA7 /* ListBreedsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53394E27B8076600C93AA7 /* ListBreedsInteractor.swift */; };
 		CE53395327B82E2700C93AA7 /* DogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53395227B82E2700C93AA7 /* DogService.swift */; };
 		CE53395627B9611B00C93AA7 /* BreedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53395527B9611B00C93AA7 /* BreedViewModel.swift */; };
+		CEBA9A6A27EA6C5E00B619E9 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBA9A6927EA6C5E00B619E9 /* UIImage.swift */; };
+		CEBA9A6C27EA6D1900B619E9 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBA9A6B27EA6D1900B619E9 /* UIColor.swift */; };
 		CEE9914827EA489600BECEE6 /* Breeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9914727EA489600BECEE6 /* Breeds.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		CE53394E27B8076600C93AA7 /* ListBreedsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBreedsInteractor.swift; sourceTree = "<group>"; };
 		CE53395227B82E2700C93AA7 /* DogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogService.swift; sourceTree = "<group>"; };
 		CE53395527B9611B00C93AA7 /* BreedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedViewModel.swift; sourceTree = "<group>"; };
+		CEBA9A6927EA6C5E00B619E9 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		CEBA9A6B27EA6D1900B619E9 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		CEE9914727EA489600BECEE6 /* Breeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breeds.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +87,7 @@
 				CE53395127B82DAF00C93AA7 /* Services */,
 				CE53393F27B6F4B500C93AA7 /* Screens */,
 				CEE9914627EA488400BECEE6 /* DTOs */,
+				CEBA9A6827EA6C4C00B619E9 /* Extensions */,
 				CE53394127B6F55C00C93AA7 /* Default */,
 			);
 			path = CoordinatorSimple;
@@ -134,6 +139,15 @@
 				CE53395227B82E2700C93AA7 /* DogService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		CEBA9A6827EA6C4C00B619E9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CEBA9A6927EA6C5E00B619E9 /* UIImage.swift */,
+				CEBA9A6B27EA6D1900B619E9 /* UIColor.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		CEE9914627EA488400BECEE6 /* DTOs */ = {
@@ -222,6 +236,8 @@
 				CE53392E27B6F40900C93AA7 /* SceneDelegate.swift in Sources */,
 				CE221F7827BFF9940004B0E2 /* BreedsViewModelFactory.swift in Sources */,
 				CE53395327B82E2700C93AA7 /* DogService.swift in Sources */,
+				CEBA9A6C27EA6D1900B619E9 /* UIColor.swift in Sources */,
+				CEBA9A6A27EA6C5E00B619E9 /* UIImage.swift in Sources */,
 				CE53395627B9611B00C93AA7 /* BreedViewModel.swift in Sources */,
 				CE53394F27B8076600C93AA7 /* ListBreedsInteractor.swift in Sources */,
 			);

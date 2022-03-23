@@ -55,11 +55,37 @@ final class ListBreedsViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         presenter.viewDidAppear()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        /// black - белый статус бар, default - черный
+        navigationController?.navigationBar.barStyle = .black
+        /// цвет кнопок в Items
+        navigationController?.navigationBar.tintColor = .red
+        navigationController?.navigationBar.barTintColor = .brown
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        
+        // navigationController?.navigationBar.isTranslucent = true
+        // navigationController?.navigationBar.setBackgroundImage(UIImage(color: .brown), for: .default)
+    }
+    
+    private func setPurpleNavigationBar() {
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .purple
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.compactAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
     
     func setupUI() {
         view.backgroundColor = .white
-        title = "Doggie App"
+        title = "Doggie App 🐾"
         
         view.addSubview(activityIndicator)
         let activityIndicatorConstraints: [NSLayoutConstraint] = [
