@@ -13,7 +13,7 @@
 
 @property (strong, nonatomic) NSString* name;
 @property (assign, nonatomic) CGFloat temperature;
-// @property (weak, nonatomic) ASDoctor <ASPatientDelegate> * doctor;
+// @property (weak, nonatomic) ASDoctor <ASPatientDelegate> * doctor; - варианты
 // @property (weak, nonatomic) NSObject <ASPatientDelegate> * doctor;
 @property (weak, nonatomic) id <ASPatientDelegate> delegate;
 
