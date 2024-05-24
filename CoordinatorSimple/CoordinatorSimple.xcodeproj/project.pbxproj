@@ -23,6 +23,7 @@
 		CE53394F27B8076600C93AA7 /* ListBreedsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53394E27B8076600C93AA7 /* ListBreedsInteractor.swift */; };
 		CE53395327B82E2700C93AA7 /* DogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53395227B82E2700C93AA7 /* DogService.swift */; };
 		CE53395627B9611B00C93AA7 /* BreedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53395527B9611B00C93AA7 /* BreedViewModel.swift */; };
+		CE5E347E2C005E5E004674D5 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E347D2C005E5E004674D5 /* DIContainer.swift */; };
 		CEBA9A6A27EA6C5E00B619E9 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBA9A6927EA6C5E00B619E9 /* UIImage.swift */; };
 		CEBA9A6C27EA6D1900B619E9 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBA9A6B27EA6D1900B619E9 /* UIColor.swift */; };
 		CEE9914827EA489600BECEE6 /* Breeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9914727EA489600BECEE6 /* Breeds.swift */; };
@@ -47,6 +48,7 @@
 		CE53394E27B8076600C93AA7 /* ListBreedsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBreedsInteractor.swift; sourceTree = "<group>"; };
 		CE53395227B82E2700C93AA7 /* DogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogService.swift; sourceTree = "<group>"; };
 		CE53395527B9611B00C93AA7 /* BreedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedViewModel.swift; sourceTree = "<group>"; };
+		CE5E347D2C005E5E004674D5 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		CEBA9A6927EA6C5E00B619E9 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		CEBA9A6B27EA6D1900B619E9 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		CEE9914727EA489600BECEE6 /* Breeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breeds.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		CE53394427B6F8C400C93AA7 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				CE5E347C2C005E3B004674D5 /* DIContainer */,
 				CE53392B27B6F40900C93AA7 /* AppDelegate.swift */,
 				CE53392D27B6F40900C93AA7 /* SceneDelegate.swift */,
 				CE53394527B6F8DD00C93AA7 /* AppCoordinator.swift */,
@@ -167,6 +170,14 @@
 				CE126AFF27EB3C2400D72EB6 /* NetworkService */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		CE5E347C2C005E3B004674D5 /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				CE5E347D2C005E5E004674D5 /* DIContainer.swift */,
+			);
+			path = DIContainer;
 			sourceTree = "<group>";
 		};
 		CEBA9A6827EA6C4C00B619E9 /* Extensions */ = {
@@ -271,6 +282,7 @@
 				CEBA9A6C27EA6D1900B619E9 /* UIColor.swift in Sources */,
 				CEBA9A6A27EA6C5E00B619E9 /* UIImage.swift in Sources */,
 				CE53395627B9611B00C93AA7 /* BreedViewModel.swift in Sources */,
+				CE5E347E2C005E5E004674D5 /* DIContainer.swift in Sources */,
 				CE53394F27B8076600C93AA7 /* ListBreedsInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
