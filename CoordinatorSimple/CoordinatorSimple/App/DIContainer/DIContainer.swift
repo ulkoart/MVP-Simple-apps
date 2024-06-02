@@ -10,6 +10,7 @@
 //container.register({ NetworkServiceImpl() as NetworkService }, for: NetworkService.self)
 //container.register({ DatabaseServiceImpl(networkService: container.resolve(NetworkService.self)) as DatabaseService }, for: DatabaseService.self)
 /// Регистрация синглтона
+//
 // container.registerSingleton(AppSettings.shared, for: AppSettings.self)
 
 class DIContainer {
